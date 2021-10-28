@@ -1,16 +1,10 @@
-# dos_uno_dos
+Equipo conformado por:
+Jeremy Zabala
+Leopoldo Quezada
+Guillermo Rivera
+Francisco Quintana
+Joshua Komaba
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Para utilizar el proyecto se necesita clonar el repositorio.
+2. Después se utilizará el comando 'flutter create .', después de haber cambiado el nombre de la carpeta por uno admisible por Flutter (nombre recomendado dos_uno_dos).
+3. Se finaliza con el comando 'flutter run --debug' o de la manera para poder ver cuando se debuguea el proyecto.
