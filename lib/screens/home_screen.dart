@@ -1,6 +1,7 @@
-import 'package:dos_uno_dos/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:dos_uno_dos/models/models.dart';
+import 'package:dos_uno_dos/screens/screens.dart';
 import 'package:dos_uno_dos/widgets/widgets.dart';
 import 'package:dos_uno_dos/services/services.dart';
 
@@ -23,7 +24,10 @@ class HomeScreen extends StatelessWidget {
           BuildContext context,
           int index
         ) => GestureDetector(
-          onTap: () => Navigator.pushNamed(context, 'product'),
+          onTap: () {
+            productService.selectedProduct = productService.products[index].copy();
+            Navigator.pushNamed(context, 'product');
+          },
           child: ProductCard(
             product: productService.products[index],
           ),
@@ -31,7 +35,14 @@ class HomeScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          productService.selectedProduct = Product(
+            available: false,
+            name: '',
+            price: 0
+          );
+          Navigator.pushNamed(context, 'product');
+        },
       ),
     );
   }
